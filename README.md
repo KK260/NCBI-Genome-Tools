@@ -7,9 +7,10 @@ Automatically download, compare, and assemble genomes from NCBI
 This script will automatically download and filter genomes from the NCBI database.
 
 ```
+# basic code:
 python findGenome.py "group" "outfolder" --org_type "chloroplast" --length_threshold INT --batch_size 50 --duplicate_removal --max_individuals_per_species INT
 
-# example
+# example:
 python findGenome.py "Ranunculus" ./output_plastomes --org_type "chloroplast" --length_threshold 170000 --batch_size 50 --duplicate_removal --max_individuals_per_species 2
 
 
