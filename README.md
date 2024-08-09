@@ -1,4 +1,4 @@
-# Analyzers-For-Finding-Comparing-Assembing-NCBI-Genomes
+# Analyzers-For-Finding-Comparing-Assembling-NCBI-Genomes
 Automatically download, compare, and assemble genomes from NCBI
 
 
