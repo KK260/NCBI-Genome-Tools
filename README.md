@@ -2,7 +2,7 @@
 Automatically download, compare, and assemble genomes from NCBI
 
 
-- findGenome.py
+# - findGenome.py
 
 This script will automatically download and filter genomes from the NCBI database.
 
@@ -40,7 +40,7 @@ options:
   --duplicate_removal   Remove .gb files with duplicate sequences or based on max individuals per species.
 ```
 
-- assembleGenome.py
+# - assembleGenome.py
 
 This script automatically extracts and compares features, and aligns and assembles annotated CDS regions from .gb files downloaded from NCBI.
 
