@@ -14,7 +14,7 @@ python findGenome.py "Ranunculus" ./output_plastomes --org_type "chloroplast" --
 
 
 # usage:
-findGenome_NCBI_v2.py [-h] [--length_threshold LENGTH_THRESHOLD] [--considered CONSIDERED]
+findGenome.py [-h] [--length_threshold LENGTH_THRESHOLD] [--considered CONSIDERED]
                              [--org_type {chloroplast,mitochondrial,nuclear_genome}] [--batch_size BATCH_SIZE]
                              [--duplicate_removal] [--max_individuals_per_species MAX_INDIVIDUALS_PER_SPECIES]
                              group outfolder
@@ -42,4 +42,4 @@ options:
 
 
 ### If you use any of the scripts, please cite the following reference until the article is published: 
-### Karbstein et al. 2023 (https://doi.org/10.1101/2023.08.08.552429)
+### Karbstein et al. 2023, BioRxiv (https://doi.org/10.1101/2023.08.08.552429)
