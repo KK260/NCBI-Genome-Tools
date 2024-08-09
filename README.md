@@ -42,4 +42,4 @@ options:
 
 
 ### If you use any of the scripts, please cite the following reference until the journal article is published: 
-### Karbstein et al. 2023, BioRxiv (https://doi.org/10.1101/2023.08.08.552429)
+Karbstein et al. (2023), BioRxiv (https://doi.org/10.1101/2023.08.08.552429)
