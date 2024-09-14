@@ -11,7 +11,7 @@ This script will automatically download and filter genomes from the NCBI databas
 python findGenome.py "group" "outfolder" --org_type "chloroplast" --length_threshold INT --batch_size 50 --duplicate_removal=FALSE --max_individuals_per_species INT --overwrite=FALSE
 
 # example:
-python findGenome_NCBI_v2.py "Ranunculus" ./plastomes_ranunculus --org_type "chloroplast" --batch_size 50 --duplicate_removal=TRUE --max_individuals_per_species 2 --overwrite=TRUE
+python findGenome_NCBI.py "Ranunculus" ./plastomes_ranunculus --org_type "chloroplast" --batch_size 50 --duplicate_removal=TRUE --max_individuals_per_species 2 --overwrite=TRUE
 
 # usage:
 findGenome.py [-h] [--length_threshold LENGTH_THRESHOLD] [--considered CONSIDERED]
