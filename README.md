@@ -46,15 +46,16 @@ This script automatically extracts and compares features, and aligns and assembl
 
 ```
 # basic code:
-python assembleGenome.py -i INPUT --group_order GROUP_ORDER -o FEATURE_SUMMARY --s GROUP_FEATURE_SUMMAY -g -a -r -x --overwrite=FALSE
+python assembleGenome.py -i INPUT -f FEATURE_SUMMARY -g --group_order GROUP_ORDER -s -a -r -t --output_dir OUTPUT_DIR --select_group SELECT_GROUP --overwrite
 
 # example:
-python assembleGenome.py -i *.gb --group_order Fumarioideae Thalictroideae Delphinieae Ranunculeae Anemoneae -o mitogenome_features -s -g -a -r -x --overwrite=TRUE
+python assembleGenome.py -i ./plastomes_ranunculus/*.gb -f mitogenome_features -g -o Fumarioideae Thalictroideae Delphinieae Ranunculeae Anemoneae -s -a -r -t --output_dir ./phylogenies_ranunclaceae --overwrite
 
 # usage:
-assembleGenome.py [-h] -i INPUT [FILE1.gb FILE2.gb ...] [--group_order GROUP_ORDER [GROUP1 GROUP2 ...]]
-                         -o FEATURE_SUMMARY [-s]
-                         [-g] [-a] [-r] [-x]
+assembleGenome.py [-h] -i INPUT [FILE1.gb FILE2.gb ...] [-f FEATURE_SUMMARY] [-g] [-o GROUP_ORDER [GROUP1 GROUP2 ...]]
+                         [-s] [-a] [-r] [-t]
+                         [--output_dir OUTPUT_DIR]
+                         [--select_group SELECT_GROUP]
                          [--overwrite]
 
 Process GenBank files and extract gene names and sequences.
@@ -62,19 +63,24 @@ Process GenBank files and extract gene names and sequences.
 options:
   -h, --help            show this help message and exit
   -i INPUT [INPUT ...], --input INPUT [INPUT ...]
-                        Input GenBank file paths
-  --group_order GROUP_ORDER [GROUP_ORDER ...]
-                        Order of groups for columns in the output
-  -o, --feature_summary FEATURE_SUMMARY
-                        Base path for the output files (without extension)
-  -s, --group_feature_summary
-                        Generate group-wise summary
-  -g, --gene_sequences  Generate gene sequence FASTA files
+                        Paths to the GenBank files
+  -f FEATURE_SUMMARY, --feature_summary FEATURE_SUMMARY
+                        Base path for feature summary files (CSV and XLSX)
+  -g, --group_feature_summary
+                        Whether to generate a section-wise feature summary
+  -o GROUP_ORDER [GROUP_ORDER ...], --group_order GROUP_ORDER [GROUP_ORDER ...]
+                        Optional: Order of sections in the summary files
+  -s, --generate_gene_sequences
+                        Generate gene sequences in FASTA format
   -a, --align_sequences
                         Align gene sequences using MAFFT
-  -r, --run_raxml       Run RAxML-NG analysis on aligned sequences
-  -x, --run_astral      Run ASTRAL analysis using RAxML best trees
-  --overwrite           Overwrite existing files and directories
+  -r, --run_raxml       Run RAxML-NG for phylogenetic analysis
+  -t, --run_astral      Perform ASTRAL analysis on RAxML trees
+  --select_group SELECT_GROUP
+                        Limit gene extraction to a specific group
+  --output_dir OUTPUT_DIR
+                        Output directory for gene sequences and alignment results
+  --overwrite           Overwrite existing files if they exist
 ```
 
 ### If you use any of the scripts, please cite the following reference until the journal article is published: 
